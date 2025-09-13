@@ -1,0 +1,20 @@
+- name: "configure {{ component }} server"
+  hosts: localhost
+  connection: local
+  var_files:
+  - "variables-{{ environment }}.yaml"
+  become: yes
+  roles:
+  - "{{ component }}"
+
+  # - name: Configure components
+  #   hosts: "{{ item }}"
+  #   become: yes
+  #   vars:
+  #     components:
+  #       - db
+  #       - backend
+  #       - frontend
+  #   roles:
+  #     - "{{ item }}"
+  #   loop: "{{ components }}"
