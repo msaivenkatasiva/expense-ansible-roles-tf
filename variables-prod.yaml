@@ -3,3 +3,4 @@ login_host: db-prod.devops76.sbs
 login_password: ExpenseApp1
 DB_HOST: db-prod.devops76.sbs
 BACKEND_API_URL: backend.app-prod.devops76.sbs
+nexus_url: nexus.devops76.sbs:8081

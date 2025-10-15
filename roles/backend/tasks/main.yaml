@@ -23,12 +23,12 @@
     name: common
     tasks_from: app-pre-req
     
-- name: download dependencies
-  tags:
-  - deployment
-  ansible.builtin.command: npm install
-  args:
-    chdir: /app
+# - name: download dependencies
+#   tags:
+#   - deployment
+#   ansible.builtin.command: npm install
+#   args:
+#     chdir: /app                  #not required to install dependencies as we have our own artifact
 
 - name: copying backend file
   ansible.builtin.template:
